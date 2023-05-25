@@ -1,0 +1,19 @@
+<h1>LOGIN</h1>
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput type="email" name="email" required ngModel />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput type="password" name="password" required ngModel />
+  </mat-form-field>
+  <button
+    mat-button
+    color="primary"
+    type="submit"
+    [disabled]="!loginform.valid"
+  >
+    Invia
+  </button>
+</form>
